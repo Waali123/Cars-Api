@@ -36,6 +36,9 @@ app.use('/contactUs', contactUsRouter)
 const homeRouter = require('./routes/home')
 app.use('/home', homeRouter)
 
+const connectedRouter = require('./routes/connected')
+app.use('/connect', connectedRouter)
+
 if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
 }
